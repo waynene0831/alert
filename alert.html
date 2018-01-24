@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>alert</title>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="alert.js"></script>
+	<style>
+		/*	xs25, sm30, md40, lg50*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	    .xs{
+	      padding: 4.9px 8px;
+	    }
+	     .sm{
+	      padding:  6.5px 8px;
+	    }
+	     .md{
+	      padding:  11.5px 8px;
+	    }
+	     .lg{
+	      padding:  17.4px 8px;
+	    }
+	    .alt_lnal{
+	    background: #000000;
+	    margin: 0 auto;
+	    font-size: 0.8em;
+	    max-width: 1200px;  
+	    position: relative;   
+	    }
+	    .ctn{
+	    	color: #FFFFFF;
+	    	display: inline-block;
+	    	margin-right: 42px;
+            text-align: justify;
+	    }
+	    .iwrap{    
+	    	display: inline-block;
+	    }
+         .ic-lnpx{
+            width: 17px;
+	    	height: 15px;
+	    	background: url(./aicon.png) 0 0 no-repeat;
+	    	margin: -2px 4px 0 0 ;
+	    	display: inline-block;
+         }
+        .close{
+        	    position: absolute;
+			    width: 50px;
+			    height: 100%;
+			    right: 0;
+			    top: 0;
+			    background: url(./close.png) no-repeat 50%;
+          }
+        .hide{
+        	display: none;
+        }
+        .show{
+        	display: block;
+        }
+	</style>
+</head>
+<body>
+<script>
+$(function() {
+	$('body').alt_lnal({
+		size: 'md', // xs, sm, md, lg
+		html: {
+			icon: '<i class="ic-lnpx warning_yellow d-ib align-middle"></i>',
+			content: '為了體驗更優質的網站服務，建議您更新瀏覽器版本。(單行高度40)'
+		},
+		class: {
+			main: 'alt_lnal',
+			wrap: {
+				icon: 'iwrap',
+				content: 'ctn',
+				close: 'close'
+			}
+		},
+		style: {
+			main: null,
+			wrap: {
+				icon: null,
+				content: '',
+				close: null
+			}
+		}
+	});
+
+	$('body').alt_lnal( 'createAlert', {
+		size: 'sm', // xs, sm, md, lg
+		html: {
+			icon: '<i class="ic-lnpx warning_yellow d-ib align-middle"></i>',
+			content: '123為保障您帳戶安全，如接獲雄獅旅遊來電帳款錯誤要求重新付款或是退款。請重新致電服務業務確認或撥165反詐騙專線諮詢，不要立即操作ATM。<a href="/info/165/index.html" class="d-ib" target="_blank" style="color:#ffea00">(詳情)</a>(單行高度30)'
+		},
+		class: {
+			main: 'alt_lnal',
+			wrap: {
+				icon: 'iwrap',
+				content: 'ctn',
+				close: 'close'
+			}
+		},
+		style: {
+			main: null,
+			wrap: {
+				icon: null,
+				content: 'color:#ffea00',
+				close: null
+			}
+		}
+	});
+	
+	$('body').alt_lnal( 'createAlert', {
+		size: 'xs', // xs, sm, md, lg
+		html: {
+			icon: '',
+			content: '123123測試，極小alert單行高度25'
+		},
+		class: {
+			main: 'alt_lnal',
+			wrap: {
+				icon: 'iwrap',
+				content: 'ctn',
+				close: 'close'
+			}
+		},
+		style: {
+			main: null,
+			wrap: {
+				icon: null,
+				content: 'color:#ffea00',
+				close: null
+			}
+		}
+	});
+	$('body').alt_lnal( 'createAlert', {
+		size: 'lg', // xs, sm, md, lg
+		html: {
+			icon: '',
+			content: '大的alert是單行高度50'
+		},
+		class: {
+			main: 'alt_lnal',
+			wrap: {
+				icon: 'iwrap',
+				content: 'ctn',
+				close: 'close'
+			}
+		},
+		style: {
+			main: null,
+			wrap: {
+				icon: null,
+				content: 'color:#ffea00',
+				close: null
+			}
+		}
+	});
+});
+</script>
+	
+</body>
+</html>
